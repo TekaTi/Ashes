@@ -1,5 +1,5 @@
 #include <memory>
-
+#include "WPILib.h"
 #include <Commands/Command.h>
 #include <Commands/Scheduler.h>
 #include <IterativeRobot.h>
@@ -74,6 +74,15 @@ public:
 
 	void TeleopPeriodic() override {
 		frc::Scheduler::GetInstance()->Run();
+		
+		OI::OI()
+{
+	joy = new Joystick(1);
+
+	JoystickButton* button1 = new JoystickButton(joy, 1),
+		
+	
+}
 	}
 
 	void TestPeriodic() override {
